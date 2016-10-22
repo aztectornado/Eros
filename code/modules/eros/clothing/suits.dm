@@ -129,3 +129,116 @@
 	name = "lolita dress"
 	icon_state = "eros_lolitadress"
 	item_state = "eros_lolitadress"
+
+/obj/item/clothing/suit/storage/hooded/wintercoat
+	name = "winter coat"
+	desc = "A heavy jacket made from 'synthetic' animal furs."
+	icon_state = "eros_coatwinter"
+	item_state_slots = list(slot_r_hand_str = "eros_coatwinter", slot_l_hand_str = "eros_coatwinter")
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|ARMS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 0)
+	hooded = 1
+	action_button_name = "Toggle Winter Hood"
+	hoodtype = /obj/item/clothing/head/winterhood
+
+/obj/item/clothing/head/winterhood
+	name = "winter hood"
+	desc = "A hood attached to a heavy winter jacket."
+	icon_state = "generic_hood"
+	body_parts_covered = HEAD
+	cold_protection = HEAD
+	flags_inv = HIDEEARS | BLOCKHAIR
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/captain
+	name = "captain's winter coat"
+	icon_state = "eros_coatcaptain"
+	item_state_slots = list(slot_r_hand_str = "eros_coatcaptain", slot_l_hand_str = "eros_coatcaptain")
+	armor = list(melee = 20, bullet = 15, laser = 20, energy = 10, bomb = 15, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/security
+	name = "security winter coat"
+	icon_state = "eros_coatsecurity"
+	item_state_slots = list(slot_r_hand_str = "eros_coatsecurity", slot_l_hand_str = "eros_coatsecurity")
+	armor = list(melee = 25, bullet = 20, laser = 20, energy = 15, bomb = 20, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical
+	name = "medical winter coat"
+	icon_state = "eros_coatmedical"
+	item_state_slots = list(slot_r_hand_str = "eros_coatmedical", slot_l_hand_str = "eros_coatmedical")
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 50, rad = 0)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/science
+	name = "science winter coat"
+	icon_state = "eros_coatscience"
+	item_state_slots = list(slot_r_hand_str = "coatscience", slot_l_hand_str = "eros_coatscience")
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering
+	name = "engineering winter coat"
+	icon_state = "eros_coatengineer"
+	item_state_slots = list(slot_r_hand_str = "eros_coatengineer", slot_l_hand_str = "eros_coatengineer")
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 20)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos
+	name = "atmospherics winter coat"
+	icon_state = "eros_coatatmos"
+	item_state_slots = list(slot_r_hand_str = "eros_coatatmos", slot_l_hand_str = "eros_coatatmos")
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/hydro
+	name = "hydroponics winter coat"
+	icon_state = "eros_coathydro"
+	item_state_slots = list(slot_r_hand_str = "eros_coathydro", slot_l_hand_str = "eros_coathydro")
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/cargo
+	name = "cargo winter coat"
+	icon_state = "eros_coatcargo"
+	item_state_slots = list(slot_r_hand_str = "eros_coatcargo", slot_l_hand_str = "eros_coatcargo")
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/miner
+	name = "mining winter coat"
+	icon_state = "eros_coatminer"
+	item_state_slots = list(slot_r_hand_str = "eros_coatminer", slot_l_hand_str = "eros_coatminer")
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+
+/obj/item/clothing/suit/storage/toggle/track
+	name = "track jacket"
+	desc = "a track jacket, for the athletic."
+	icon_state = "eros_trackjacket"
+	item_state_slots = list(slot_r_hand_str = "black_labcoat", slot_l_hand_str = "black_labcoat")
+	icon_open = "eros_trackjacket_open"
+	icon_closed = "eros_trackjacket"
+
+/obj/item/clothing/suit/storage/toggle/track/blue
+	name = "blue track jacket"
+	icon_state = "eros_trackjacketblue"
+	item_state_slots = list(slot_r_hand_str = "blue_labcoat", slot_l_hand_str = "blue_labcoat")
+	icon_open = "eros_trackjacketblue_open"
+	icon_closed = "eros_trackjacketblue"
+
+/obj/item/clothing/suit/storage/toggle/track/green
+	name = "green track jacket"
+	icon_state = "eros_trackjacketgreen"
+	item_state_slots = list(slot_r_hand_str = "green_labcoat", slot_l_hand_str = "green_labcoat")
+	icon_open = "eros_trackjacketgreen_open"
+	icon_closed = "eros_trackjacketgreen"
+
+/obj/item/clothing/suit/storage/toggle/track/red
+	name = "red track jacket"
+	icon_state = "eros_trackjacketred"
+	item_state_slots = list(slot_r_hand_str = "red_labcoat", slot_l_hand_str = "red_labcoat")
+	icon_open = "eros_trackjacketred_open"
+	icon_closed = "eros_trackjacketred"
+
+/obj/item/clothing/suit/storage/toggle/track/white
+	name = "white track jacket"
+	icon_state = "eros_trackjacketwhite"
+	item_state_slots = list(slot_r_hand_str = "labcoat", slot_l_hand_str = "labcoat")
+	icon_open = "eros_trackjacketwhite_open"
+	icon_closed = "eros_trackjacketwhite"
+
+/obj/item/clothing/suit/storage/leather_jacket/alt
+	icon_state = "eros_leather_jacket_alt"
+	item_state_slots = list(slot_r_hand_str = "leather_jacket", slot_l_hand_str = "leather_jacket")

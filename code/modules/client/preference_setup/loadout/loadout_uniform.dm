@@ -5,10 +5,6 @@
 	slot = slot_w_uniform
 	sort_category = "Uniforms and Casual Dress"
 
-/datum/gear/uniform/cheongsam
-	display_name = "cheongsam, white"
-	path = /obj/item/clothing/under/cheongsam
-
 /datum/gear/uniform/kilt
 	display_name = "kilt"
 	path = /obj/item/clothing/under/kilt
@@ -197,6 +193,10 @@
 		shorts[initial(short_type.name)] = short_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(shorts))
 
+/datum/gear/uniform/tacticool
+	display_name = "tacticool turtleneck"
+	path = /obj/item/clothing/under/syndicate/tacticool
+
 
 //EROS START
 
@@ -204,5 +204,130 @@
 	display_name = "gear harness"
 	path = /obj/item/clothing/under/harness
 
+/datum/gear/uniform/eros/loose_dress
+	display_name = "Loose Dress"
+	path = /obj/item/clothing/under/loose_dress
+
+/datum/gear/uniform/cheongsam
+	display_name = "cheongsam selection"
+
+/datum/gear/uniform/cheongsam/New()
+	..()
+	var/list/cheongasms = list()
+	for(var/cheongasm in typesof(/obj/item/clothing/under/cheongsam))
+		var/obj/item/clothing/under/cheongsam/cheongasm_type = cheongasm
+		cheongasms[initial(cheongasm_type.name)] = cheongasm_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cheongasms))
+
+/datum/gear/uniform/croptop
+	display_name = "croptop, NT"
+	path = /obj/item/clothing/under/croptop
+
+/datum/gear/uniform/croptop/grey
+	display_name = "croptop, grey"
+	path = /obj/item/clothing/under/croptop/grey
+
+/datum/gear/uniform/croptop/red
+	display_name = "croptop, red"
+	path = /obj/item/clothing/under/croptop/red
+
+/datum/gear/uniform/cuttop
+	display_name = "cut top, grey"
+	path = /obj/item/clothing/under/cuttop
+
+/datum/gear/uniform/cuttop/red
+	display_name = "cut top, red"
+	path = /obj/item/clothing/under/cuttop/red
+
+/datum/gear/uniform/colonist1
+	display_name= "colonist clothes"
+	path = /obj/item/clothing/under/colonist
+
+/datum/gear/uniform/colonist2
+	display_name= "colonist clothes, alt"
+	path = /obj/item/clothing/under/colonist/colonist2
+
+/datum/gear/uniform/colonist3
+	display_name= "colonist clothes, alt 2"
+	path = /obj/item/clothing/under/colonist/colonist3
+
+/datum/gear/uniform/tenpenny
+	display_name= "red fancy suit"
+	path = /obj/item/clothing/under/tenpenny
+
+/datum/gear/uniform/springm
+	display_name= "springwear clothes"
+	path = /obj/item/clothing/under/springm
+
+/datum/gear/uniform/relaxedwearm
+	display_name= "relaxedwear"
+	path = /obj/item/clothing/under/relaxedwearm
+
+/datum/gear/uniform/springf
+	display_name= "springwear dress"
+	path = /obj/item/clothing/under/springf
+
+/datum/gear/uniform/wasteland
+	display_name= "wasteland fatigues"
+	path = /obj/item/clothing/under/wasteland
+
+/datum/gear/uniform/cowboy_dark
+	display_name= "black cowboy outfit"
+	path = /obj/item/clothing/under/cowboy_dark
+
+/datum/gear/uniform/cowboy
+	display_name= "brown cowboy outfit"
+	path = /obj/item/clothing/under/cowboy
+
+/datum/gear/uniform/seifuku
+	display_name= "delinquent schoolgirl uniform"
+	path = /obj/item/clothing/under/seifuku
+
+/datum/gear/uniform/polkaskirt
+	display_name= "polkadot skirt"
+	path = /obj/item/clothing/under/polkaskirt
+
+/datum/gear/uniform/victoria
+	display_name= "victorian suit"
+	path = /obj/item/clothing/under/victoria
+
+/datum/gear/uniform/girlwinter
+	display_name= "winter girls clothes"
+	path = /obj/item/clothing/under/girlwinter
+
+/datum/gear/uniform/shortplaindress
+	display_name = "plain dress"
+	path = /obj/item/clothing/under/dress/white3
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/uniform/longdress
+	display_name = "long dress"
+	path = /obj/item/clothing/under/dress/white2
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/uniform/longwidedress
+	display_name = "long wide dress"
+	path = /obj/item/clothing/under/dress/white4
+	flags = GEAR_HAS_COLOR_SELECTION
+
+/datum/gear/uniform/maid
+	path = /obj/item/clothing/under/dress/maid
+	display_name = "maid uniform"
+
+/datum/gear/uniform/janimaid
+	path = /obj/item/clothing/under/dress/janimaid
+	display_name = "maid uniform, alt"
+
+/datum/gear/uniform/whitewedding
+	display_name= "white wedding dress"
+	path = /obj/item/clothing/under/dress/white
+
+/datum/gear/uniform/hoodiejeans
+	display_name= "casual hoodie and jeans"
+	path = /obj/item/clothing/under/hoodiejeans
+
+/datum/gear/uniform/hoodieskirt
+	display_name= "casual hoodie and skirt"
+	path = /obj/item/clothing/under/hoodieskirt
 
 //EROS FINISH

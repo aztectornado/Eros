@@ -221,3 +221,131 @@
 	desc = "A purple and wite uniform, specially designed for assistants with an eye for science."
 	icon_state = "eros_assistsci"
 	item_state_slots = list(slot_r_hand_str = "eros_assistsci", slot_l_hand_str = "eros_assistsci")
+
+/obj/item/clothing/under/loose_dress
+	name = "Loose Dress"
+	desc = "A dress that leaves very little to the imagination."
+	icon_state = "eros_loosedress"
+	show_genitals = 1
+
+/obj/item/clothing/under/cheongsam/red
+	name = "red cheongsam"
+	desc = "It is a red cheongsam dress."
+	icon_state = "cheongsam-red"
+	item_state = "cheongsam-red"
+	worn_state = "cheongsam-red"
+
+/obj/item/clothing/under/cheongsam/blue
+	name = "blue cheongsam"
+	desc = "It is a blue cheongsam dress."
+	icon_state = "cheongsam-blue"
+	item_state = "cheongsam-blue"
+	worn_state = "cheongsam-blue"
+
+/obj/item/clothing/under/cheongsam/black
+	name = "black cheongsam"
+	desc = "It is a black cheongsam dress."
+	icon_state = "cheongsam-black"
+	item_state = "cheongsam-black"
+	worn_state = "cheongsam-black"
+
+/obj/item/clothing/under/croptop
+	name = "crop top"
+	desc = "A shirt that has had the top cropped. This one is NT sponsored."
+	icon_state = "croptop"
+	item_state = "croptop"
+	worn_state = "croptop"
+	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
+
+/obj/item/clothing/under/croptop/red
+	name = "red crop top"
+	desc = "A red shirt that has had the top cropped."
+	icon_state = "croptop_red"
+	item_state = "croptop_red"
+	worn_state = "croptop_red"
+	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
+
+/obj/item/clothing/under/croptop/grey
+	name = "grey crop top"
+	desc = "A grey shirt that has had the top cropped."
+	icon_state = "croptop_grey"
+	item_state = "croptop_grey"
+	worn_state = "croptop_grey"
+	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
+
+/obj/item/clothing/under/cuttop
+	name = "grey cut top"
+	desc = "A grey shirt that has had the top cut low."
+	icon_state = "cuttop"
+	item_state = "cuttop"
+	worn_state = "cuttop"
+	item_state_slots = list(slot_r_hand_str = "grey", slot_l_hand_str = "grey")
+
+/obj/item/clothing/under/cuttop/red
+	name = "red cut top"
+	desc = "A red shirt that has had the top cut low."
+	icon_state = "cuttop_red"
+	item_state = "cuttop_red"
+	worn_state = "cuttop_red"
+	item_state_slots = list(slot_r_hand_str = "red", slot_l_hand_str = "red")
+
+/obj/item/clothing/under/dress/maid
+	name = "maid uniform"
+	desc = "Maid in China."
+	icon_state = "maid"
+	item_state = "maid"
+	worn_state = "maid"
+
+/obj/item/clothing/under/dress/janimaid
+	name = "maid uniform"
+	desc = "A simple maid uniform for housekeeping."
+	icon_state = "janimaid"
+	item_state = "janimaid"
+	worn_state = "janimaid"
+
+/obj/item/clothing/under/hoodiejeans
+	name = "casual hoodie and jeans"
+	desc = "Perfect for lounging about in."
+	icon_state = "eros_hoodiejeans"
+	item_state = "eros_hoodiejeans"
+	worn_state = "eros_hoodiejeans"
+	item_state_slots = list(slot_r_hand_str = "eros_hoodiejeans", slot_l_hand_str = "eros_hoodiejeans")
+
+/obj/item/clothing/under/hoodieskirt
+	name = "casual hoodie and skirt"
+	desc = "Perfect for lounging about in."
+	icon_state = "eros_hoodieskirt"
+	item_state = "eros_hoodieskirt"
+	worn_state = "eros_hoodieskirt"
+	item_state_slots = list(slot_r_hand_str = "eros_hoodieskirt", slot_l_hand_str = "eros_hoodieskirt")
+
+/obj/item/clothing/under/dress/white
+	name = "white wedding dress"
+	desc = "A fancy white dress with a blue underdress."
+	icon_state = "whitedress1"
+	item_state = "whitedress1"
+	worn_state = "whitedress1"
+	flags_inv = HIDESHOES
+
+/obj/item/clothing/under/dress/white2
+	name = "long dress"
+	desc = "A long dress."
+	icon_state = "whitedress2"
+	item_state = "whitedress2"
+	worn_state = "whitedress2"
+	flags_inv = HIDESHOES
+
+/obj/item/clothing/under/dress/white3
+	name = "short dress"
+	desc = "A short, plain dress."
+	icon_state = "whitedress3"
+	item_state = "whitedress3"
+	worn_state = "whitedress3"
+
+/obj/item/clothing/under/dress/white4
+	name = "long flared dress"
+	desc = "A long white dress that flares out at the bottom."
+	icon_state = "whitedress4"
+	item_state = "whitedress4"
+	worn_state = "whitedress4"
+	flags_inv = HIDESHOES

@@ -31,8 +31,20 @@
 	path = /obj/item/clothing/suit/storage/toggle/brown_jacket/nanotrasen
 
 /datum/gear/suit/hazard_vest
-	display_name = "hazard vest"
+	display_name = "hazard vest, orange"
 	path = /obj/item/clothing/suit/storage/hazardvest
+
+/datum/gear/suit/hazard_vest/blue
+	display_name = "hazard vest, blue"
+	path = /obj/item/clothing/suit/storage/hazardvest/blue
+
+/datum/gear/suit/hazard_vest/white
+	display_name = "hazard vest, white"
+	path = /obj/item/clothing/suit/storage/hazardvest/white
+
+/datum/gear/suit/hazard_vest/green
+	display_name = "hazard vest, green"
+	path = /obj/item/clothing/suit/storage/hazardvest/green
 
 /datum/gear/suit/hoodie
 	display_name = "hoodie, grey"
@@ -86,6 +98,10 @@
 	display_name = "suit jacket, purple"
 	path = /obj/item/clothing/suit/storage/lawyer/purpjacket
 
+/datum/gear/suit/internalaffairs/plain
+	display_name = "suit jacket, black"
+	path = /obj/item/clothing/suit/storage/toggle/internalaffairs/plain
+
 /datum/gear/suit/suspenders
 	display_name = "suspenders"
 	path = /obj/item/clothing/suit/suspenders
@@ -132,6 +148,85 @@
 	path = /obj/item/clothing/suit/poncho/roles/cargo
 	allowed_roles = list("Quartermaster","Cargo Technician")
 
+/datum/gear/suit/flannel
+	display_name = "grey flannel"
+	path = /obj/item/clothing/suit/storage/flannel
 
+/datum/gear/suit/flannel/red
+	display_name = "red flannel"
+	path = /obj/item/clothing/suit/storage/flannel/red
+
+/datum/gear/suit/flannel/aqua
+	display_name = "aqua flannel"
+	path = /obj/item/clothing/suit/storage/flannel/aqua
+
+/datum/gear/suit/colonel
+	display_name = "colonels jacket"
+	path = /obj/item/clothing/suit/storage/colonel
+
+/datum/gear/suit/wintercoat
+	display_name = "winter coat"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat
+
+/datum/gear/suit/wintercoat/captain
+	display_name = "winter coat, station administrator"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/captain
+	allowed_roles = list("Station Administrator")
+
+/datum/gear/suit/wintercoat/security
+	display_name = "winter coat, security"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
+	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
+
+/datum/gear/suit/wintercoat/medical
+	display_name = "winter coat, medical"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/medical
+	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist")
+
+/datum/gear/suit/wintercoat/science
+	display_name = "winter coat, science"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science
+	allowed_roles = list("Research Director","Scientist", "Roboticist", "Xenobiologist")
+
+/datum/gear/suit/wintercoat/engineering
+	display_name = "winter coat, engineering"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/engineering
+	allowed_roles = list("Chief Engineer", "Station Engineer")
+
+/datum/gear/suit/wintercoat/atmos
+	display_name = "winter coat, atmospherics"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/engineering/atmos
+	allowed_roles = list("Chief Engineer", "Station Engineer")
+
+/datum/gear/suit/wintercoat/hydro
+	display_name = "winter coat, hydroponics"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/hydro
+	allowed_roles = list("Botanist", "Xenobiologist")
+
+/datum/gear/suit/wintercoat/cargo
+	display_name = "winter coat, cargo"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/cargo
+	allowed_roles = list("Quartermaster","Cargo Technician")
+
+/datum/gear/suit/wintercoat/miner
+	display_name = "winter coat, mining"
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/miner
+	allowed_roles = list("Shaft Miner")
+
+/datum/gear/suit/track
+	display_name = "track jacket selection"
+	path = /obj/item/clothing/suit/storage/toggle/track
+
+/datum/gear/suit/track/New()
+	..()
+	var/list/tracks = list()
+	for(var/track_style in typesof(/obj/item/clothing/suit/storage/toggle/track))
+		var/obj/item/clothing/suit/storage/toggle/track/track = track_style
+		tracks[initial(track.name)] = track
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(tracks))
+
+/datum/gear/suit/leather_jacket_alt
+	display_name = "leather jacket 2, black"
+	path = /obj/item/clothing/suit/storage/leather_jacket/alt
 
 //EROS FINISH

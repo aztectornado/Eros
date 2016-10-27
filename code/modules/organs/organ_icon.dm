@@ -158,12 +158,41 @@ var/list/limb_icon_cache = list()
 	update_icon()
 	return mob_icon
 
+/obj/item/organ/external/proc/apply_colouration(var/icon/applying)
+
+	if(nonsolid)
+		applying.MapColors("#4D4D4D","#969696","#1C1C1C", "#000000")
+		if(species && species.get_bodytype(owner) != "Human")
+			applying.SetIntensity(1.5) // Unathi, Taj and Skrell have -very- dark base icons.
+		else
+			applying.SetIntensity(0.7)
+
+	else if(status & ORGAN_DEAD)
+		icon_cache_key += "_dead"
+		applying.ColorTone(rgb(10,50,0))
+		applying.SetIntensity(0.7)
+
+	if(!isnull(s_tone))
+		if(s_tone >= 0)
+			applying.Blend(rgb(s_tone, s_tone, s_tone), ICON_ADD)
+		else
+			applying.Blend(rgb(-s_tone,  -s_tone,  -s_tone), ICON_SUBTRACT)
+		icon_cache_key += "_tone_[s_tone]"
+	else if(s_col && s_col.len >= 3)
+		applying.Blend(rgb(s_col[1], s_col[2], s_col[3]), ICON_ADD)
+		icon_cache_key += "_color_[s_col[1]]_[s_col[2]]_[s_col[3]]"
+
+	// Translucency.
+	if(nonsolid) applying += rgb(,,,180) // SO INTUITIVE TY BYOND
+
+	return applying
+
 // Returns an image for use by the human health dolly HUD element.
 // If the user has traumatic shock, it will be passed in as a minimum
 // damage amount to represent the pain of the injuries involved.
 
 // Global scope, used in code below.
-var/list/flesh_hud_colours = list("#00FF00","#AAFF00","#FFFF00","#FFAA00","#FF0000","#AA0000","#660000")
+var/list/flesh_hud_colours = list("#00FF00","#AAFF00","#FFFF00","#FFAA00","#FF0000666","#AA0000","#660000")
 var/list/robot_hud_colours = list("#FFFFFF","#CCCCCC","#AAAAAA","#888888","#666666","#444444","#222222","#000000")
 
 /obj/item/organ/external/proc/get_damage_hud_image(var/min_dam_state)

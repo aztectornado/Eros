@@ -399,6 +399,9 @@ var/global/list/damage_icon_parts = list()
 		if(update_icons)   update_icons()
 		return
 
+	if(head_organ.nonsolid)
+		overlays_standing += rgb(,,,120)
+
 	overlays_standing[HAIR_LAYER]	= head_organ.get_hair_icon()
 
 	if(update_icons)   update_icons()

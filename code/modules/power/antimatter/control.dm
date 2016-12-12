@@ -34,6 +34,13 @@
 	linked_shielding = list()
 	linked_cores = list()
 
+/obj/machinery/power/am_control_unit/start_linked
+	anchored = 1
+
+/obj/machinery/power/am_control_unit/start_linked/New()
+	..()
+	connect_to_network()
+
 
 /obj/machinery/power/am_control_unit/Destroy()//Perhaps damage and run stability checks rather than just del on the others
 	for(var/obj/machinery/am_shielding/AMS in linked_shielding)
